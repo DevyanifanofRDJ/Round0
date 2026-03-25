@@ -194,7 +194,3 @@ Uses React Context API for global state:
 - [ ] Password reset
 - [ ] Two-factor authentication
 - [ ] Email notifications
-
-## 📄 License
-
-MIT License

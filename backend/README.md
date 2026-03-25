@@ -569,51 +569,6 @@ frontend/
 └── README.md
 ```
 
-## 🚀 Deployment
-
-### Docker Deployment
-
-**Backend Dockerfile:**
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install --production
-COPY src ./src
-COPY migrations ./migrations
-EXPOSE 5000
-CMD ["npm", "start"]
-```
-
-**Frontend Dockerfile:**
-```dockerfile
-FROM node:18-alpine AS build
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
-```
-
-### Heroku Deployment
-
-```bash
-# Backend
-cd backend
-heroku create your-api-name
-heroku addons:create heroku-postgresql:hobby-dev
-git push heroku main
-
-# Frontend
-cd frontend
-heroku create your-frontend-name
-git push heroku main
-```
-
 ## 📋 Environment Variables
 
 ### Backend (.env)
@@ -636,23 +591,6 @@ CORS_ORIGIN=http://localhost:3000
 ```env
 REACT_APP_API_URL=http://localhost:5000/api/v1
 ```
-
-## 🤝 Contributing
-
-Feel free to submit pull requests and open issues for bugs or feature requests.
-
-## 📄 License
-
-MIT License - feel free to use this project for personal and commercial purposes.
-
-## 🆘 Support
-
-For issues and questions:
-1. Check the API documentation at `/api-docs`
-2. Review the code comments
-3. Check PostgreSQL connection settings
-4. Verify JWT token is being sent correctly
-
 ## 🎯 Assignment Completion Checklist
 
 ✅ Backend (Primary Focus)
