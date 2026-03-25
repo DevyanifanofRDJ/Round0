@@ -258,8 +258,6 @@ PUT    /api/v1/tasks/admin/:id   - Update any task
 DELETE /api/v1/tasks/admin/:id   - Delete any task
 ```
 
-See [API_TESTING_GUIDE.md](API_TESTING_GUIDE.md) for detailed examples.
-
 ## 🔒 Security Features
 
 1. **Password Security**
@@ -307,20 +305,6 @@ See [API_TESTING_GUIDE.md](API_TESTING_GUIDE.md) for detailed examples.
 7. **Orchestration**: Kubernetes for container management
 8. **CI/CD**: GitHub Actions or Jenkins for automated deployment
 
-See [SETUP_GUIDE.md](SETUP_GUIDE.md#scalability-architecture) for detailed scalability recommendations.
-
-## 🐳 Docker Deployment
-
-```bash
-# Build and run with Docker Compose
-docker-compose up --build
-
-# Access services:
-# API: http://localhost:5000
-# Frontend: http://localhost:3000
-# Database: localhost:5432
-```
-
 ## 📝 Environment Variables
 
 ### Backend (.env)
@@ -367,8 +351,6 @@ curl -X POST http://localhost:5000/api/v1/tasks \
   -d '{"title": "My Task"}'
 ```
 
-See [API_TESTING_GUIDE.md](API_TESTING_GUIDE.md) for comprehensive testing examples.
-
 ## 🚀 Deployment
 
 ### Production Checklist
@@ -384,29 +366,10 @@ See [API_TESTING_GUIDE.md](API_TESTING_GUIDE.md) for comprehensive testing examp
 - [ ] Load testing completed
 - [ ] Security audit done
 
-### Deploy to Heroku
-
-```bash
-# Backend
-cd backend
-heroku create your-api-name
-heroku addons:create heroku-postgresql:hobby-dev
-git push heroku main
-
-# Frontend
-cd frontend
-heroku create your-frontend-name
-git push heroku main
-```
-
-See [SETUP_GUIDE.md](SETUP_GUIDE.md#deployment) for detailed deployment instructions.
-
 ## 📚 Documentation
 
 - [Backend README](backend/README.md) - Backend API documentation
 - [Frontend README](frontend/README.md) - Frontend setup & features
-- [SETUP_GUIDE.md](SETUP_GUIDE.md) - Complete setup & deployment
-- [API_TESTING_GUIDE.md](API_TESTING_GUIDE.md) - API endpoint testing
 
 ## 🎯 Assignment Completion
 
@@ -440,24 +403,6 @@ See [SETUP_GUIDE.md](SETUP_GUIDE.md#deployment) for detailed deployment instruct
 - [x] Setup & deployment guides
 - [x] Scalability recommendations
 
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## 📄 License
-
-MIT License - Open for personal and commercial use.
-
-## 🆘 Support
-
-For questions and issues:
-1. Check API docs at `http://localhost:5000/api-docs`
-2. Review code comments and structure
-3. See API_TESTING_GUIDE.md for endpoint examples
-4. Check SETUP_GUIDE.md for configuration
-
----
-
 ## 🎉 Ready to Go!
 
 Everything is set up and ready for:
@@ -465,5 +410,3 @@ Everything is set up and ready for:
 - ✅ Testing
 - ✅ Deployment
 - ✅ Scaling
-
-Start with the [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed instructions on getting started locally or deploying to production!
